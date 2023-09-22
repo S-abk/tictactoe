@@ -13,34 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-/* function handleCellClick(event) {
-    const cell = event.target;
-    const row = parseInt(cell.getAttribute('data-row'));
-    const col = parseInt(cell.getAttribute('data-col'));
 
-    if (board[row][col] === '_') {
-        board[row][col] = currentPlayer;
-        cell.textContent = currentPlayer;
-        if (checkWinner(board, currentPlayer)) {
-            setTimeout(() => alert(`${currentPlayer} wins!`), 100);
-            return;
-        }
-        if (checkDraw(board)) {
-            setTimeout(() => alert("It's a draw!"), 100);
-            return;
-        }
-        currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
-        if (currentPlayer === 'O') {
-            const [bestRow, bestCol] = findBestMove(board);
-            board[bestRow][bestCol] = 'O';
-            document.querySelector(`[data-row='${bestRow}'][data-col='${bestCol}']`).textContent = 'O';
-            if (checkWinner(board, 'O')) {
-                setTimeout(() => alert("O wins!"), 100);
-            }
-            currentPlayer = 'X';
-        }
-    }
-} */
 function handleCellClick(event) {
     const cell = event.target;
     const row = parseInt(cell.getAttribute('data-row'));
