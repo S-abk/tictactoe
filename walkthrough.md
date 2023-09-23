@@ -1,4 +1,5 @@
-https://github.com/S-abk/tictactoe
+Github: https://github.com/S-abk/tictactoe
+Browser: https://s-abk.github.io/tictactoe/
 # Tic-Tac-Toe Game Walkthrough
 
 Welcome to the Tic-Tac-Toe game where a human player competes against a computer. This documentation provides a detailed walkthrough of the game's design and implementation.
@@ -86,8 +87,6 @@ The Minimax algorithm is a decision-making algorithm used for finding the best m
 Consider a game where the search tree has a depth of 4. With baseline Minimax, the algorithm would evaluate every possible move at every depth. If there are an average of 10 possible moves at each level, the algorithm evaluates 10,000 nodes.
 
 With alpha-beta pruning, the algorithm might only evaluate 5,000 nodes or even fewer, depending on the order in which nodes are evaluated and the values of alpha and beta at each step. This means alpha-beta pruning can be twice as fast (or even faster) than baseline Minimax.
-
-#### Conclusion:
 
 While the baseline Minimax algorithm is powerful and guarantees finding the best move, it can be slow for complex games. Alpha-beta pruning offers a significant optimization, allowing the algorithm to search deeper and make better decisions without sacrificing optimality.
 
