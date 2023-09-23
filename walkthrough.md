@@ -61,11 +61,45 @@ Functions are implemented to check if there's a winner or if the board is full (
 
 ### Minimax Algorithm
 
-The Minimax algorithm is a recursive function that simulates all possible moves for both players and chooses the optimal move for the computer. It returns a score for each move: positive if beneficial for the computer, negative if beneficial for the human, and zero for a draw.
+The Minimax algorithm is a decision-making algorithm used for finding the best move in games like Tic-Tac-Toe, Chess, and Go. The algorithm predicts the opponent's moves and chooses the most optimal move for the current player.
+
+#### How It Works:
+
+1. **Recursive Nature**: Minimax is a recursive algorithm that simulates all possible moves in the game for both players.
+2. **Evaluation**: After reaching a terminal state (win, lose, or draw), the algorithm evaluates the board and assigns a score.
+3. **Maximizing and Minimizing**: The algorithm tries to maximize the score when it's the computer's turn and minimize the score when it's the opponent's turn.
+
+#### Baseline Minimax vs. Alpha-Beta Pruning:
+
+- **Baseline Minimax**: This is the basic version of the algorithm. It explores all possible moves and all possible game states. While it's guaranteed to find the best move, it can be very slow for games with a large number of possible moves or deep search trees.
+
+- **Alpha-Beta Pruning**: This is an optimization technique for the Minimax algorithm. It reduces the number of nodes evaluated in the search tree by pruning branches that don't need to be explored. The main idea is to maintain two values, alpha and beta, which represent the minimum score the maximizing player is assured of and the maximum score the minimizing player is assured of respectively.
+
+#### Advantages of Alpha-Beta Pruning:
+
+1. **Efficiency**: Alpha-beta pruning significantly reduces the number of nodes evaluated, making the algorithm faster.
+2. **Depth**: With alpha-beta pruning, the algorithm can search deeper in the same amount of time, leading to better decision-making.
+3. **Optimality**: Despite pruning parts of the search tree, alpha-beta pruning always produces the same move as the baseline Minimax algorithm.
+
+#### Demonstration:
+
+Consider a game where the search tree has a depth of 4. With baseline Minimax, the algorithm would evaluate every possible move at every depth. If there are an average of 10 possible moves at each level, the algorithm evaluates 10,000 nodes.
+
+With alpha-beta pruning, the algorithm might only evaluate 5,000 nodes or even fewer, depending on the order in which nodes are evaluated and the values of alpha and beta at each step. This means alpha-beta pruning can be twice as fast (or even faster) than baseline Minimax.
+
+#### Conclusion:
+
+While the baseline Minimax algorithm is powerful and guarantees finding the best move, it can be slow for complex games. Alpha-beta pruning offers a significant optimization, allowing the algorithm to search deeper and make better decisions without sacrificing optimality.
+
 
 ## Testing
 
-After implementation, it's essential to test the game by playing multiple rounds. Ensure the computer plays optimally and that the game correctly identifies wins, losses, and draws.
+After implementation, it's essential to test the game by playing multiple rounds. Below are screenshots of output from running the python script and the web based version
+
+![Capture](https://github.com/S-abk/tictactoe/assets/117982032/1015da56-25dd-4f77-b01f-3f210919d313)
+![Capture_2](https://github.com/S-abk/tictactoe/assets/117982032/a77035de-7341-45f6-a0b5-210519a6b47d)
+![Capture_1](https://github.com/S-abk/tictactoe/assets/117982032/a5079207-d253-45cf-a53d-99b9c54c8fcf)
+![Capture_0](https://github.com/S-abk/tictactoe/assets/117982032/3adfdd32-340e-4505-83cb-33fc458b230b)
 
 ## References
 
