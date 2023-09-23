@@ -83,6 +83,9 @@ def find_best_move(board):
 
 # Main function to play the game
 def play_game():
+    print("Welcome to Tic-Tac-Toe!")
+    print("You are 'X' and the computer is 'O'.")
+    print("Player 'X' goes first. Let's begin!\n")
     while True:
         board = copy.deepcopy(initial_board)
         while True:
