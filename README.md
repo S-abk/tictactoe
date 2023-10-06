@@ -5,4 +5,4 @@ An implementation of a single player tic tac toe game vs AI implemented using mi
 ---->>https://s-abk.github.io/tictactoe/<<----
 
 
-Developed in python and browser environments.
+Developed in python and javascript.
